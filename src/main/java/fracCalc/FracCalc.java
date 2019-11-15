@@ -4,12 +4,17 @@
 
 package fracCalc;
 
+import java.util.Scanner;
 public class FracCalc {
 
     public static void main(String[] args)
     {
         // TODO: Read the input from the user and call produceAnswer with an equation
-
+    	String a;
+    	Scanner userInput = new Scanner(System.in);
+		a = userInput.nextLine();
+		userInput.close();
+		System.out.println(produceAnswer(a));
     }
 
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
@@ -23,8 +28,10 @@ public class FracCalc {
     public static String produceAnswer(String input)
     {
         // TODO: Implement this function to produce the solution to the input
-
-        return "";
+    	int x = input.indexOf(' ');
+    	int y = input.length(); 
+    	String firstPart = input.substring(x+3,y);
+        return firstPart;
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
